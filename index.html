@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900|Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#headerVideoLink').magnificPopup({
+        type: 'inline',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+      });
+    });
+
+    $(document).ready(function() {
+      $(".dropdownview").bind("click", function() {
+        $("div#container").toggle();
+        return false; // prevent propagation
+      })
+    });
+
+    $(document).ready(function() {
+      $('#dropbutton1').bind("click", function() {
+        $('#drop_ul_1').toggleClass('active');
+        if ($('#drop_ul_2').hasClass('active')) {
+          $('#drop_ul_2').toggleClass('active');
+        }
+      })
+    });
+
+    $(document).ready(function() {
+      $('#dropbutton2').bind("click", function() {
+        $('#drop_ul_2').toggleClass('active');
+        if ($('#drop_ul_1').hasClass('active')) {
+          $('#drop_ul_1').toggleClass('active');
+        }
+      })
+    });
+  </script>
+</head>
+
+<body>
+  <header id="navbar">
+    <nav>
+      <ul>
+        <li class="grow"><a href="#about">About Me</a></li>
+        <li class="grow"><a href="#edu">Education</a></li>
+        <li class="grow"><a href="#projects">Projects</a></li>
+        <li class="grow"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="index-banner" id="about" data-text="About Me">
+      <div class="vertical-center">
+        <h1>Hey, I'm <br></h1>
+        <h2>Rodger Lee</h2>
+      </div>
+    </section>
+    <section data-aos="fade-up" id="boxes" data-text="About Me-pictures">
+      <div class="container">
+        <div class="box">
+          <img class="side-img" src=".\img\sports.png">
+          <p style="font-size:1.3vw;">I have a great passion for sports (mainly basketball and volleyball).
+            Sports is about perseverance, hard work, companionship, and the value of both winning and losing. Unironically,
+            I've managed to approach life through the basic principles of sports. If you like basketball, feel free to
+            contact me and we can chat about anything!
+          </p>
+        </div>
+
+        <div class="box">
+          <a href="#headerPopup" id="headerVideoLink" target="_blank" class="btn btn-outline-danger popup-modal">
+            <img class="grow" src=".\img\royce.png">
+          </a>
+          <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+            <iframe class="embed-responsive-item" width="854" height="480" src="https://www.youtube.com/embed/tIT1Smbpi2Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <!-- <h3>UCLA<br> Samueli School of Engineering</h3> -->
+          <p style="font-size:1.3vw;">As a low-income, first generation college student and a first generation American Born Chinese, I have been fortunate
+            enough to attend this amazing institution for the past three years. I've met amazing friends, professors, and mentors who
+            have helped guide me through a multitude of challenges. Currently, my greatest challenge is a career shift into Computer Science from
+            Civil and Environmental Engineering and everyday I am looking to learn more and create more. I hope that one day, I can also teach someone how to succeed in this field :)
+          </p>
+        </div>
+        <div class="box">
+          <a href="http://www.ascebruins.org/seismic-design.html" target="_blank">
+            <img class="grow" class="side-img" src=".\img\seismicteam.png">
+          </a>
+
+          <p style="font-size:1.3vw;">This year, as Project Manager, I helped lead a team of
+            30 engineering students in the annual international Seismic Design competition held by the Earthquake Engineering Research Institute. We placed 4th out
+            of 48 teams, making us a top five placing team for 3 years in a row. The teachings in Civil and Environmental Engineering inspire me to withhold our basic principles
+            and duties as engineers of society. </p>
+        </div>
+      </div>
+
+    </section>
+    <section data-aos="fade-up"  class="education" id="edu" data-text="Education">
+      <div class="box">
+        <h4>Education</h4>
+        <img id="logo" src="img/ucla-logo.png">
+        <p >
+          <br> Bachelor of Science in Civil and Environmental Engineering - Expected June, 2021 <br> Technical Breadth in Computer Science
+          <br> GPA: 3.652 (Chi Epsilon Honor Society)
+        </p>
+      </div>
+      <div class="dropdownview">
+        <div class="box">
+          <button id="dropbutton1">Coursework &dtri;</button>
+            <ul id="drop_ul_1">
+              <li>Object-Oriented Programming</li>
+              <li>Data Structures</li>
+              <!-- <li>Algorithms and Complexity (next quarter)</li> -->
+              <li>Computer Organization (in progress)</li>
+              <li>Discrete Mathematics (in progress)</li>
+              <li>Artifical Intelligence and Machine Learning in Civil Engineering (in progress)</li>
+              <li id="lastitem1">Multivariable Calculus</li>
+            </ul>
+        </div>
+
+        <div class="box">
+          <button id="dropbutton2">Programming Languages &dtri;</button>
+          <ul id="drop_ul_2">
+            <li>C/C++</li>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li id="lastitem2">CSS</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <section data-aos="fade-up" class="projects" id="projects" data-text="Projects">
+      <h4>Projects</h4>
+      <div class="box">
+        <h3>Goober Eats Delivery Application</h3>
+          <div class="img-col">
+            <img src="img/goobereats.png">
+          </div>
+          <div class="text-col">
+            <p>
+              "Goober Eats" is a C++ item delivery application that utilizes object-oriented programming to find an
+              approximate shortest delivery route ("Traveling Salesman") based on input map data, delivery
+              text files. The application outputs delivery instructions as seen on the right. <br><br> For the GitHub
+              repository, click <a href="https://github.com/rodgerlee/Goober-Eats" target="_blank">here.</a>
+            </p>
+          </div>
+      </div>
+      <div class="box">
+        <h3>Kontagion</h3>
+          <div class="img-col">
+            <img src="img/kontagion.png">
+          </div>
+          <div class="text-col">
+            <p>
+              "Kontagion" is a C++ classic arcade-style shooting game. The user controls avatar “Socrates” with real-time key
+              inputs to tackle each level. Levels include heal and restore packs, enemy abilities range from basic to deadly homing
+              capabilities, etc. Play to reach the highest score! <br> <br>For the GitHub repository,
+              click <a href="https://github.com/rodgerlee/UCLA-CS32/tree/master/projects/project3" target="_blank">here.</a>
+            </p>
+          </div>
+      </div>
+    </section>
+    <section data-aos="fade-up" class="contact" id="contact" data-text="Contact">
+      <h4>Contact</h4>
+      <p>For a copy of my resume, click <a href="rodgerResume.pdf" target="_blank">here.</a> <br>
+        Let's connect. Feel free to email me at rodgerl@g.ucla.edu, or click one of following links.</p>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/rodgerlee/" target="_blank">
+          <img class="grow" src="img/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/rodgerlee" target="_blank">
+          <img class="grow" src="img/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.facebook.com/rodger.lee.5" target="_blank">
+          <img class="grow" src="img/facebook.png" alt="Facebook">
+        </a>
+      </div>
+
+
+    </section>
+
+  </main>
+
+  <footer>
+    <script src="magnific-popup.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+    <script src="aos.js"></script>
+    <script type="text/javascript">
+      AOS.init({
+        duration: 800,
+      });
+    </script>
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function() {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+          document.getElementById("navbar").style.padding = "0 0";
+        } else {
+          document.getElementById("navbar").style.padding = "12px 0";
+        }
+      }
+    </script>
+  </footer>
+
+
+
+</body>
+
+</html>
