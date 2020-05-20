@@ -429,7 +429,7 @@ button:hover {
   box-shadow: 1px 1px 0 #C0C0C0;
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {html {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {html .index-banner{
 
     background: url('../img/uclabrand.jpg') no-repeat top center fixed;
 
